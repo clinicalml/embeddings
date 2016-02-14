@@ -9,7 +9,7 @@ from multiprocessing import Pool
 #ie = parser.parse_args().ie
 
 ie = '../stanford_cuis_svd_300.txt'
-threads = 4
+threads = 1
 
 #Read in the concept_to_CUI map
 concept_to_CUI_hdr = '2b_concept_ID_to_CUI.txt'
@@ -67,6 +67,10 @@ def print_cui_type(CUI):
 def compute_cosine_distance(idx_pair):
     first_idx = idx_pair[0]
     second_idx = idx_pair[1]
+    if sum(abs(embedding_matrix[second_idx,:])) <= 0.00000000001:
+        return 0
+    if sum(abs(embedding_matrix[first_idx,:])) <= 0.00000000001:
+        return 0
     return 1-cosine(embedding_matrix[second_idx,:],embedding_matrix[first_idx,:])
 
 def compute_cosine_distance_with_vector(idx_vector_pair):
