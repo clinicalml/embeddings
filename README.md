@@ -10,3 +10,5 @@ In the `eval` directory there are three files of interest:
 * [`eval/Embedding_Evaluation.ipynb`](https://github.com/clinicalml/embeddings/blob/master/eval/Embedding_Evaluation.ipynb), an iPython notebook which reproduces the main results of the paper. If you come up with your own embeddings, you can use this benchmark to quantitatively compare them to our embeddings.
 * `eval/visualize_claims_embeddings.py` a Python program you can run which will allow you to look at nearest neighbors for the `claims_codes_hs_300.txt` embeddings (after decompressing the file using `gunzip`).
 * `eval/visualize_stanford_embeddings.py`, same as above but for the `stanford_cuis_svd_300.txt` embeddings.
+
+Note that you may need to decompress, using `gunzip`, files in the `eval` directory prior to being able to run some of the programs. Additionally, to run the iPython notebook, you need to place the file `MRCONSO.RRF` from the [UMLS Metathesaurus](https://www.nlm.nih.gov/research/umls/licensedcontent/umlsknowledgesources.html) into the `eval` directory (we do not distribute this).
