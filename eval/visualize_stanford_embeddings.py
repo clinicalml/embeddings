@@ -76,6 +76,10 @@ def compute_cosine_distance(idx_pair):
 def compute_cosine_distance_with_vector(idx_vector_pair):
     first_idx = idx_vector_pair[0]
     vector = idx_vector_pair[1]
+    if sum(abs(vector)) <= 0.00000000001:
+        return 0
+    if sum(abs(embedding_matrix[first_idx,:])) <= 0.00000000001:
+        return 0
     return 1 - cosine(vector,embedding_matrix[first_idx,:])
 
 if __name__ == "__main__":
