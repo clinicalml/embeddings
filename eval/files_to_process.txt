@@ -1,2 +1,3 @@
+../DeVine_etal_200.txt
 ../claims_cuis_hs_300.txt
 ../stanford_cuis_svd_300.txt
