@@ -5,6 +5,7 @@ This repository contains code accompanying publication of the paper:
 In the base directory there are two files containing the two best 300-dimensional embeddings learned in the paper:
 * `claims_codes_hs_300.txt.gz`: Embeddings of ICD-9 diagnosis and procedure codes, NDC medication codes, and LOINC laboratory codes, learned on a large claims dataset from 2005 to 2013 for roughly 4 million people.
 * `stanford_cuis_svd_300.txt.gz`: Embeddings of [UMLS](https://www.nlm.nih.gov/research/umls/) concept unique identifiers (CUIs), learned from 20 million clinical notes spanning 19 years of data from Stanford Hospital and Clinics, using a  [data set](http://datadryad.org/resource/doi:10.5061/dryad.jp917) released in a [paper](http://www.nature.com/articles/sdata201432) by Finlayson, LePendu & Shah.
+* `DeVine_etal_200.txt.gz`: Embeddings learned by [De Vine et al. CIKM '14](http://dl.acm.org/citation.cfm?id=2661974), derived from 348,566 medical journal abstracts.
 
 In the `eval` directory there are three files of interest:
 * [`eval/Embedding_Evaluation.ipynb`](https://github.com/clinicalml/embeddings/blob/master/eval/Embedding_Evaluation.ipynb), an iPython notebook which reproduces the main results of the paper. If you come up with your own embeddings, you can use this benchmark to quantitatively compare them to our embeddings.
